@@ -1,0 +1,170 @@
+:root{
+  --primary:#D81E5B;
+  --secondary:#8A4EFC;
+  --liight:#EEE;
+  --light-alt:#61759b;
+  --dark:#131A26;
+  --dark-alt:#202B3E;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background-color: var(--dark-alt);
+  color:var(--liight);
+}
+
+.App{
+  padding:20px;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h4{
+  font-size: 18px;
+  color: var(--light-alt);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 600;
+
+}
+
+.todo{
+  position:relative;
+  background-color: var(--dark);
+  padding:16px;
+  border-radius:16px;
+  display: flex;
+  align-items:center;
+  margin-bottom: 16px;
+  transition:0.4s;
+  cursor:pointer;
+}
+
+.todo:hover{
+  opacity:0.8;
+}
+
+.todo .checkBox{
+  width:20px;
+  height:20px;
+  margin-right: 16px;
+  border-radius: 999px;
+  background-color: var(--dark-alt);
+  transition:0.4s;
+}
+
+.todo.isComplete .checkBox{
+  background-color: var(--primary);
+  background-image: linear-gradient(to bottom , var(--primary), var(--secondary));
+}
+
+.todo .text{
+  font-size: 20px;
+}
+
+.todo.isComplete .texts{
+  text-decoration: line-through;
+}
+
+.todo .delete{
+  position:absolute;
+  top:50%;
+  right:16px;
+  transform: translateY(-50%);
+  width:24px;
+  height:24px;
+  background-color: #AF1E2d;
+  color:var(--liight);
+  border-radius:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.addPopup{
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height:64px;
+  font-size: 28px;
+  font-weight: 900;
+  border-radius: 999px;
+
+  color: var(--liight);
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  cursor:pointer;
+}
+
+.myPopup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 3px 24px var(--dark);
+}
+
+.closePopup{
+  position: absolute;
+  top:16px;
+  right:16px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color:var(--light-alt);
+  border-radius: 50%;
+}
+
+.myPopup h3{
+  color: var(--dark);
+  margin-bottom: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.addTodoInput{
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 16px;
+  border-radius:16px;
+  box-shadow:0 2px 24px rgba(0,0,0,0.2);
+  width: 100%;
+  font-size: 20px;
+}
+
+.button{
+  padding:16px 32px;
+  border-radius:99px;
+  background-image: linear-gradient(to right, var(--primary), var(--secondary));
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 16px;
+  text-align: center;
+  cursor:pointer;
+}
